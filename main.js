@@ -15,3 +15,19 @@ const divide = function (number1, number2) {
 	return number1 / number2;
 };
 
+/* Function takes an operator and 2 numbers and then calls one of 
+the above functions on the numbers*/
+function operate(operator, number1, number2) {
+	if (operator === 'add') {
+		return add(number1, number2);
+	}
+	if (operator === 'subtract') {
+		return subtract(number1, number2);
+	}
+	if (operator === 'multiply') {
+		return multiply(number1, number2);
+	}
+	if (operator === 'divide') {
+		return divide(number1, number2);
+	}
+}
