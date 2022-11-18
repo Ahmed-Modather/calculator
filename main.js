@@ -31,3 +31,9 @@ function operate(operator, number1, number2) {
 		return divide(number1, number2);
 	}
 }
+
+// Function Show Its argument in the top side of calculator's screen.
+function showInScreen (value) {
+	const topScreen = document.querySelector('.top-screen');
+	topScreen.textContent = value;
+}
