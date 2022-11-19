@@ -35,9 +35,22 @@ function operate(operator, number1, number2) {
 // Function Shows Its argument in the top side of calculator's screen.
 function viewInScreen(value) {
 	const topScreen = document.querySelector('.top-screen');
-	topScreen.textContent = value;
+	if (value === 'CLEAR') {
+		topScreen.textContent = '';
+	} else {
+		topScreen.textContent = value;
+	}
 }
 
+// Function Shows Its argument in the bottom side of calculator's screen "when press "=".
+function viewResult(value) {
+	const result = document.querySelector('.result');
+	if (value === 'CLEAR') {
+		result.textContent = '';
+	} else {
+		result.textContent = value;
+	}
+}
 /* Constructor Function used to create number objects by add its digits one by one 
    and finally we can get the whole number.
    it allows to remove digit too.
