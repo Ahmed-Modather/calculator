@@ -19,7 +19,7 @@ const calculator = {
 	// Take input and evalute it.
 	takeInput: function (input) {	
 		//In case type of input is number store it as digit in number object. 
-		if (!isNaN(+input)) {
+		if (!isNaN(+input) || input==='.') {
 			this.number.addDigit(input);
 			viewResult(this.number.returnNumber());
 		}
